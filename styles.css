@@ -10,24 +10,50 @@
 
 #display{
     border: 2px solid black;
+    width: 500px;
+    height: 100px;
+    margin: auto;
+}
+
+#button-container{
+    border: 2px solid black;
+    width: 500px;
+    margin: auto;
+}
+
+div button{
+    width: 75px;
+    height: 75px;
+    margin: 10px 25px 10px 25px;
+    border-radius: 50px;
 }
 
 #row1{
     display: flex;
+    width: 500px;
+    margin: auto;
 }
 
 #row2{
     display: flex;
+    width: 500px;
+    margin: auto;
 }
 
 #row3{
     display: flex;
+    width: 500px;
+    margin: auto;
 }
 
 #row4{
     display: flex;
+    width: 500px;
+    margin: auto;
 }
 
 #row5{
     display: flex;
+    width: 500px;
+    margin: auto;
 }
