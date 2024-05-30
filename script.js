@@ -123,3 +123,60 @@ plusMinus.addEventListener('click', () => {
 dot.addEventListener('click', () => {
    display.textContent += ".";
 });
+
+function operate(operator, operand1, operand2)
+{
+   operand1 = Number(operand1);
+   operand2 = Number(operand2);
+   switch(operator)
+   {
+      case "+":
+         return operand1 + operand2;
+      break;
+      case "-":
+         return operand1 - operand2;
+      break;
+      case "x":
+         return operand1 * operand2;
+      break;
+      case "/":
+         return operand1 / operand2;
+      break;
+      default:
+         return "Error";
+   }
+}
+
+equals.addEventListener('click', () => {
+   const array = [...display.textContent];
+   let opIndex = 0;
+   let operatorInput = "";
+   if(array.indexOf("+") !== -1)
+   {
+      opIndex = array.indexOf("+");
+      operatorInput = "+";
+   }
+   else if(array.indexOf("-") !== -1)
+   {
+      opIndex = array.indexOf("-");
+      operatorInput = "-";
+   }
+   else if(array.indexOf("x") !== -1)
+   {
+      opIndex = array.indexOf("x");
+      operatorInput = "x";
+   }
+   else if(array.indexOf("/") !== -1)
+   {
+      opIndex = array.indexOf("/");
+      operatorInput = "/";
+   }
+   else
+   {
+      opIndex = 0;
+      operatorInput = "None";
+   }
+   const op1 = array.slice(0, opIndex).join("");
+   const op2 = array.slice(opIndex + 1).join("");
+   display.textContent = operate(operatorInput, op1, op2);
+});
