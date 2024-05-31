@@ -25,47 +25,110 @@ const zero = document.getElementById("zeroBtn");
 const dot = document.getElementById("dotBtn");
 const equals = document.getElementById("equalsBtn");
 
+let equalsPressed = false;
+
+function clearDisplay()
+{
+   display.textContent = "";
+}
+
+
 zero.addEventListener('click', () => {
+   if(equalsPressed)
+   {
+      clearDisplay();
+      equalsPressed = false;
+   }
    display.textContent += "0";
 });
 
 one.addEventListener('click', () => {
+   if(equalsPressed)
+   {
+      clearDisplay();
+      equalsPressed = false;
+   }
    display.textContent += "1"; 
 });
 
 two.addEventListener('click', () => {
+   if(equalsPressed)
+   {
+      clearDisplay();
+      equalsPressed = false;
+   }
    display.textContent += "2"; 
 });
 
 three.addEventListener('click', () => {
+   if(equalsPressed)
+   {
+      clearDisplay();
+      equalsPressed = false;
+   }
    display.textContent += "3"; 
 });
 
 four.addEventListener('click', () => {
+   if(equalsPressed)
+   {
+      clearDisplay();
+      equalsPressed = false;
+   }
    display.textContent += "4"; 
 });
 
 five.addEventListener('click', () => {
+   if(equalsPressed)
+   {
+      clearDisplay();
+      equalsPressed = false;
+   }
    display.textContent += "5"; 
 });
 
 six.addEventListener('click', () => {
+   if(equalsPressed)
+   {
+      clearDisplay();
+      equalsPressed = false;
+   }
    display.textContent += "6"; 
 });
 
 seven.addEventListener('click', () => {
+   if(equalsPressed)
+   {
+      clearDisplay();
+      equalsPressed = false;
+   }
    display.textContent += "7"; 
 });
 
 eight.addEventListener('click', () => {
+   if(equalsPressed)
+   {
+      clearDisplay();
+      equalsPressed = false;
+   }
    display.textContent += "8"; 
 });
 
 nine.addEventListener('click', () => {
+   if(equalsPressed)
+   {
+      clearDisplay();
+      equalsPressed = false;
+   }
    display.textContent += "9"; 
 });
 
 division.addEventListener('click', () => {
+   if(equalsPressed)
+   {
+      clearDisplay();
+      equalsPressed = false;
+   }
    display.textContent += "/"; 
 });
 
@@ -179,4 +242,5 @@ equals.addEventListener('click', () => {
    const op1 = array.slice(0, opIndex).join("");
    const op2 = array.slice(opIndex + 1).join("");
    display.textContent = operate(operatorInput, op1, op2);
+   equalsPressed = true;
 });
